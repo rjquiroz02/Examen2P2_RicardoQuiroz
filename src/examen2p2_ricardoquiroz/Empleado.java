@@ -5,11 +5,15 @@
  */
 package examen2p2_ricardoquiroz;
 
+import java.io.Serializable;
+
 /**
  *
  * @author rjqer
  */
-public class Empleado {
+public class Empleado implements Serializable{
+    private static final long SerialVersionUID = 528L;
+    
     private String nombre;
     private int edad;
     private String id;

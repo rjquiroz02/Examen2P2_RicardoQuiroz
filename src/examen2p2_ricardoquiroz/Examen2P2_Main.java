@@ -18,7 +18,10 @@ public class Examen2P2_Main extends javax.swing.JFrame {
      */
     public Examen2P2_Main() {
         initComponents();
-        
+        AdminEmpleado ae = new AdminEmpleado("./empleados");
+        ae.cargarArchivo();
+        AdminCarro ac = new AdminCarro("./carros");
+        ac.cargarArchivo();
         
     }
     

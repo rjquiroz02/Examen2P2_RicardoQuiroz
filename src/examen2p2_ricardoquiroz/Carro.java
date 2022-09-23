@@ -5,11 +5,15 @@
  */
 package examen2p2_ricardoquiroz;
 
+import java.io.Serializable;
+
 /**
  *
  * @author rjqer
  */
-public class Carro {
+public class Carro implements Serializable{
+    private static final long SerialVersionUID = 695L;
+    
     String marca, modelo;
     int anofab;
     String estado;
