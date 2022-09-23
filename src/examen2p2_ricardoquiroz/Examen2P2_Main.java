@@ -59,6 +59,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         TF_id = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         JS_carrosrep = new javax.swing.JSpinner();
+        JB_crearempleado = new javax.swing.JButton();
         JP_eliminarempleado = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         JD_crudcarros = new javax.swing.JDialog();
@@ -74,12 +75,19 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JR_espera = new javax.swing.JRadioButton();
         jLabel13 = new javax.swing.JLabel();
         JS_costorep = new javax.swing.JSpinner();
+        JB_crearcarro = new javax.swing.JButton();
         JP_modificarcarro = new javax.swing.JPanel();
         JP_listarcarro = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         JD_otrosmenus = new javax.swing.JDialog();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         JP_simulacion = new javax.swing.JPanel();
+        JC_simempleados = new javax.swing.JComboBox<>();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        JC_simcarros = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        JPB_barrarep = new javax.swing.JProgressBar();
         JP_pagos = new javax.swing.JPanel();
         JP_entregas = new javax.swing.JPanel();
         JP_reparaciones = new javax.swing.JPanel();
@@ -97,30 +105,42 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         jLabel5.setText("Nombre:");
 
+        TF_nombre.setBackground(new java.awt.Color(204, 255, 255));
+
         jLabel6.setText("Edad:");
 
         jLabel7.setText("ID:");
 
+        TF_id.setBackground(new java.awt.Color(204, 255, 255));
+
         jLabel8.setText("Carros Reparados:");
+
+        JB_crearempleado.setBackground(new java.awt.Color(204, 255, 255));
+        JB_crearempleado.setText("Crear Empleado");
 
         javax.swing.GroupLayout JP_crearempleadoLayout = new javax.swing.GroupLayout(JP_crearempleado);
         JP_crearempleado.setLayout(JP_crearempleadoLayout);
         JP_crearempleadoLayout.setHorizontalGroup(
             JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_crearempleadoLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
                 .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(TF_nombre)
-                        .addComponent(JS_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(TF_id, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
-                    .addComponent(JS_carrosrep, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JP_crearempleadoLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5))
+                        .addGap(18, 18, 18)
+                        .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(TF_nombre)
+                                .addComponent(JS_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TF_id, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                            .addComponent(JS_carrosrep, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(JP_crearempleadoLayout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addComponent(JB_crearempleado, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(720, Short.MAX_VALUE))
         );
         JP_crearempleadoLayout.setVerticalGroup(
@@ -142,7 +162,9 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                 .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(JS_carrosrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(342, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(JB_crearempleado, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Creacion", JP_crearempleado);
@@ -188,7 +210,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         jLabel9.setText("Marca:");
 
+        TF_marca.setBackground(new java.awt.Color(204, 255, 255));
+
         jLabel10.setText("Modelo:");
+
+        TF_modelo.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel11.setText("Año Fabriacado:");
 
@@ -200,30 +226,37 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         jLabel13.setText("Costo Reparacion:");
 
+        JB_crearcarro.setBackground(new java.awt.Color(204, 255, 255));
+        JB_crearcarro.setText("Crear Carro");
+
         javax.swing.GroupLayout JP_crearcarroLayout = new javax.swing.GroupLayout(JP_crearcarro);
         JP_crearcarro.setLayout(JP_crearcarroLayout);
         JP_crearcarroLayout.setHorizontalGroup(
             JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_crearcarroLayout.createSequentialGroup()
                 .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_crearcarroLayout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel9)
-                        .addGap(18, 18, 18)
-                        .addComponent(TF_marca, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_crearcarroLayout.createSequentialGroup()
+                            .addGap(47, 47, 47)
+                            .addComponent(jLabel9)
+                            .addGap(18, 18, 18)
+                            .addComponent(TF_marca, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(JP_crearcarroLayout.createSequentialGroup()
+                            .addGap(67, 67, 67)
+                            .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel11)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel13))
+                            .addGap(18, 18, 18)
+                            .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(TF_modelo)
+                                .addComponent(JS_anofab, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                                .addComponent(JR_espera)
+                                .addComponent(JS_costorep))))
                     .addGroup(JP_crearcarroLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13))
-                        .addGap(18, 18, 18)
-                        .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TF_modelo)
-                            .addComponent(JS_anofab, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
-                            .addComponent(JR_espera)
-                            .addComponent(JS_costorep))))
+                        .addGap(120, 120, 120)
+                        .addComponent(JB_crearcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(703, Short.MAX_VALUE))
         );
         JP_crearcarroLayout.setVerticalGroup(
@@ -249,7 +282,9 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                 .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
                     .addComponent(JS_costorep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(JB_crearcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(231, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Creacion", JP_crearcarro);
@@ -308,15 +343,54 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JP_simulacion.setBackground(new java.awt.Color(255, 255, 255));
 
+        JC_simempleados.setBackground(new java.awt.Color(204, 255, 255));
+        JC_simempleados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "sdasd" }));
+
+        jLabel14.setText("Empleados:");
+
+        jLabel15.setText("Carros:");
+
+        JC_simcarros.setBackground(new java.awt.Color(204, 255, 255));
+        JC_simcarros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", " ", " " }));
+
+        jLabel16.setText("Reparacion del Vehiculo:");
+
+        JPB_barrarep.setForeground(new java.awt.Color(51, 255, 0));
+        JPB_barrarep.setStringPainted(true);
+
         javax.swing.GroupLayout JP_simulacionLayout = new javax.swing.GroupLayout(JP_simulacion);
         JP_simulacion.setLayout(JP_simulacionLayout);
         JP_simulacionLayout.setHorizontalGroup(
             JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1095, Short.MAX_VALUE)
+            .addGroup(JP_simulacionLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JPB_barrarep, javax.swing.GroupLayout.PREFERRED_SIZE, 898, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addGroup(JP_simulacionLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(18, 18, 18)
+                        .addComponent(JC_simempleados, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(124, 124, 124)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(JC_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         JP_simulacionLayout.setVerticalGroup(
             JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(JP_simulacionLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addGroup(JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JC_simempleados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15)
+                    .addComponent(JC_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addComponent(jLabel16)
+                .addGap(18, 18, 18)
+                .addComponent(JPB_barrarep, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(345, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Simulacion", JP_simulacion);
@@ -353,6 +427,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JP_reparaciones.setBackground(new java.awt.Color(255, 255, 255));
 
+        JTable_reparaciones.setBackground(new java.awt.Color(204, 255, 255));
         JTable_reparaciones.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -546,12 +621,17 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JB_crearcarro;
+    private javax.swing.JButton JB_crearempleado;
     private javax.swing.JButton JB_crudcarros;
     private javax.swing.JButton JB_crudempleados;
     private javax.swing.JButton JB_otrosmenus;
+    private javax.swing.JComboBox<String> JC_simcarros;
+    private javax.swing.JComboBox<String> JC_simempleados;
     private javax.swing.JDialog JD_crudcarros;
     private javax.swing.JDialog JD_crudempleados;
     private javax.swing.JDialog JD_otrosmenus;
+    private javax.swing.JProgressBar JPB_barrarep;
     private javax.swing.JPanel JP_bgframe;
     private javax.swing.JPanel JP_crearcarro;
     private javax.swing.JPanel JP_crearempleado;
@@ -578,6 +658,9 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
