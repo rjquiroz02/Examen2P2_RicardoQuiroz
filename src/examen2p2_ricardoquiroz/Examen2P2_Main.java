@@ -51,11 +51,29 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JD_crudempleados = new javax.swing.JDialog();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         JP_crearempleado = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        TF_nombre = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        JS_edad = new javax.swing.JSpinner();
+        jLabel7 = new javax.swing.JLabel();
+        TF_id = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        JS_carrosrep = new javax.swing.JSpinner();
         JP_eliminarempleado = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         JD_crudcarros = new javax.swing.JDialog();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         JP_crearcarro = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        TF_marca = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        TF_modelo = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        JS_anofab = new javax.swing.JSpinner();
+        jLabel12 = new javax.swing.JLabel();
+        JR_espera = new javax.swing.JRadioButton();
+        jLabel13 = new javax.swing.JLabel();
+        JS_costorep = new javax.swing.JSpinner();
         JP_modificarcarro = new javax.swing.JPanel();
         JP_listarcarro = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -68,25 +86,63 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_reparaciones = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         JP_bgframe = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         JB_crudempleados = new javax.swing.JButton();
         JB_crudcarros = new javax.swing.JButton();
         JB_otrosmenus = new javax.swing.JButton();
 
-        JD_crudempleados.setLocationByPlatform(true);
-
         JP_crearempleado.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel5.setText("Nombre:");
+
+        jLabel6.setText("Edad:");
+
+        jLabel7.setText("ID:");
+
+        jLabel8.setText("Carros Reparados:");
 
         javax.swing.GroupLayout JP_crearempleadoLayout = new javax.swing.GroupLayout(JP_crearempleado);
         JP_crearempleado.setLayout(JP_crearempleadoLayout);
         JP_crearempleadoLayout.setHorizontalGroup(
             JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1059, Short.MAX_VALUE)
+            .addGroup(JP_crearempleadoLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(TF_nombre)
+                        .addComponent(JS_edad, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TF_id, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                    .addComponent(JS_carrosrep, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(720, Short.MAX_VALUE))
         );
         JP_crearempleadoLayout.setVerticalGroup(
             JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(JP_crearempleadoLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(TF_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(JS_edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(TF_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(JS_carrosrep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(342, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Creacion", JP_crearempleado);
@@ -128,19 +184,72 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        JD_crudcarros.setLocationByPlatform(true);
-
         JP_crearcarro.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel9.setText("Marca:");
+
+        jLabel10.setText("Modelo:");
+
+        jLabel11.setText("Año Fabriacado:");
+
+        jLabel12.setText("Estado:");
+
+        buttonGroup1.add(JR_espera);
+        JR_espera.setSelected(true);
+        JR_espera.setText("EsperaEntrarReparacion");
+
+        jLabel13.setText("Costo Reparacion:");
 
         javax.swing.GroupLayout JP_crearcarroLayout = new javax.swing.GroupLayout(JP_crearcarro);
         JP_crearcarro.setLayout(JP_crearcarroLayout);
         JP_crearcarroLayout.setHorizontalGroup(
             JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1063, Short.MAX_VALUE)
+            .addGroup(JP_crearcarroLayout.createSequentialGroup()
+                .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_crearcarroLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(jLabel9)
+                        .addGap(18, 18, 18)
+                        .addComponent(TF_marca, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JP_crearcarroLayout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))
+                        .addGap(18, 18, 18)
+                        .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(TF_modelo)
+                            .addComponent(JS_anofab, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                            .addComponent(JR_espera)
+                            .addComponent(JS_costorep))))
+                .addContainerGap(703, Short.MAX_VALUE))
         );
         JP_crearcarroLayout.setVerticalGroup(
             JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(JP_crearcarroLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(TF_marca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(TF_modelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(JS_anofab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(JR_espera))
+                .addGap(18, 18, 18)
+                .addGroup(JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(JS_costorep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Creacion", JP_crearcarro);
@@ -196,8 +305,6 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-
-        JD_otrosmenus.setLocationByPlatform(true);
 
         JP_simulacion.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -455,11 +562,30 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JPanel JP_pagos;
     private javax.swing.JPanel JP_reparaciones;
     private javax.swing.JPanel JP_simulacion;
+    private javax.swing.JRadioButton JR_espera;
+    private javax.swing.JSpinner JS_anofab;
+    private javax.swing.JSpinner JS_carrosrep;
+    private javax.swing.JSpinner JS_costorep;
+    private javax.swing.JSpinner JS_edad;
     private javax.swing.JTable JTable_reparaciones;
+    private javax.swing.JTextField TF_id;
+    private javax.swing.JTextField TF_marca;
+    private javax.swing.JTextField TF_modelo;
+    private javax.swing.JTextField TF_nombre;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
