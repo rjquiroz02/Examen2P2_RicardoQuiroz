@@ -5,6 +5,8 @@
  */
 package examen2p2_ricardoquiroz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author rjqer
@@ -16,6 +18,8 @@ public class Examen2P2_Main extends javax.swing.JFrame {
      */
     public Examen2P2_Main() {
         initComponents();
+        
+        
     }
     
     public void showCrudempleados(){
@@ -125,6 +129,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JB_crearempleado.setBackground(new java.awt.Color(204, 255, 255));
         JB_crearempleado.setText("Crear Empleado");
+        JB_crearempleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_crearempleadoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout JP_crearempleadoLayout = new javax.swing.GroupLayout(JP_crearempleado);
         JP_crearempleado.setLayout(JP_crearempleadoLayout);
@@ -236,6 +245,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JB_crearcarro.setBackground(new java.awt.Color(204, 255, 255));
         JB_crearcarro.setText("Crear Carro");
+        JB_crearcarro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_crearcarroMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout JP_crearcarroLayout = new javax.swing.GroupLayout(JP_crearcarro);
         JP_crearcarro.setLayout(JP_crearcarroLayout);
@@ -667,6 +681,43 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         showOtrosmenus();
     }//GEN-LAST:event_JB_otrosmenusMouseClicked
+
+    private void JB_crearempleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crearempleadoMouseClicked
+        // TODO add your handling code here:
+        Empleado e = new Empleado();
+        e.setEdad((Integer)JS_edad.getValue());
+        e.setId(TF_id.getText());
+        e.setNombre(TF_nombre.getText());
+        e.setCreparados((Integer)JS_carrosrep.getValue());
+        AdminEmpleado ae = new AdminEmpleado("./empleados");
+        ae.cargarArchivo();
+        ae.addEmpleado(e);
+        ae.escribirArchivo();
+        JOptionPane.showMessageDialog(this, "Se creo un empleado exitosamente");
+        TF_id.setText("");
+        TF_nombre.setText("");
+        JS_edad.setValue(0);
+        JS_carrosrep.setValue(0);
+    }//GEN-LAST:event_JB_crearempleadoMouseClicked
+
+    private void JB_crearcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crearcarroMouseClicked
+        // TODO add your handling code here:
+        Carro c = new Carro();
+        c.setMarca(TF_marca.getText());
+        c.setModelo(TF_modelo.getText());
+        c.setAnofab((Integer)JS_anofab.getValue());
+        c.setCostorep((Integer)JS_costorep.getValue());
+        c.setEstado(JR_espera.getText());
+        AdminCarro ac = new AdminCarro("./carros");
+        ac.cargarArchivo();
+        ac.addCarro(c);
+        ac.escribirArchivo();
+        JOptionPane.showMessageDialog(this, "Se creo un carro exitosamente");
+        TF_marca.setText("");
+        TF_modelo.setText("");
+        JS_anofab.setValue(0);
+        JS_costorep.setValue(0);        
+    }//GEN-LAST:event_JB_crearcarroMouseClicked
 
     /**
      * @param args the command line arguments

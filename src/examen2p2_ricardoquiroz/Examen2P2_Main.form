@@ -153,6 +153,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Crear Empleado"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_crearempleadoMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -371,6 +374,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Crear Carro"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="JB_crearcarroMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
