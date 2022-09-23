@@ -17,6 +17,27 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     public Examen2P2_Main() {
         initComponents();
     }
+    
+    public void showCrudempleados(){
+        JD_crudempleados.setModal(true);
+        JD_crudempleados.pack();;
+        JD_crudempleados.setLocationRelativeTo(this);
+        JD_crudempleados.setVisible(true);
+    }
+    
+    public void showCrudcarros(){
+        JD_crudcarros.setModal(true);
+        JD_crudcarros.pack();;
+        JD_crudcarros.setLocationRelativeTo(this);
+        JD_crudcarros.setVisible(true);
+    }
+    
+    public void showOtrosmenus(){
+        JD_otrosmenus.setModal(true);
+        JD_otrosmenus.pack();;
+        JD_otrosmenus.setLocationRelativeTo(this);
+        JD_otrosmenus.setVisible(true);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,33 +49,129 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private void initComponents() {
 
         JD_crudempleados = new javax.swing.JDialog();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        JP_crearempleado = new javax.swing.JPanel();
+        JP_eliminarempleado = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         JD_crudcarros = new javax.swing.JDialog();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        JP_crearcarro = new javax.swing.JPanel();
+        JP_modificarcarro = new javax.swing.JPanel();
+        JP_listarcarro = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         JD_otrosmenus = new javax.swing.JDialog();
         jLabel1 = new javax.swing.JLabel();
         JB_crudempleados = new javax.swing.JButton();
         JB_crudcarros = new javax.swing.JButton();
         JB_otrosmenus = new javax.swing.JButton();
 
+        javax.swing.GroupLayout JP_crearempleadoLayout = new javax.swing.GroupLayout(JP_crearempleado);
+        JP_crearempleado.setLayout(JP_crearempleadoLayout);
+        JP_crearempleadoLayout.setHorizontalGroup(
+            JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1059, Short.MAX_VALUE)
+        );
+        JP_crearempleadoLayout.setVerticalGroup(
+            JP_crearempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Creacion", JP_crearempleado);
+
+        javax.swing.GroupLayout JP_eliminarempleadoLayout = new javax.swing.GroupLayout(JP_eliminarempleado);
+        JP_eliminarempleado.setLayout(JP_eliminarempleadoLayout);
+        JP_eliminarempleadoLayout.setHorizontalGroup(
+            JP_eliminarempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1059, Short.MAX_VALUE)
+        );
+        JP_eliminarempleadoLayout.setVerticalGroup(
+            JP_eliminarempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Eliminacion", JP_eliminarempleado);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setText("CRUD Empleados");
+
         javax.swing.GroupLayout JD_crudempleadosLayout = new javax.swing.GroupLayout(JD_crudempleados.getContentPane());
         JD_crudempleados.getContentPane().setLayout(JD_crudempleadosLayout);
         JD_crudempleadosLayout.setHorizontalGroup(
             JD_crudempleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(JD_crudempleadosLayout.createSequentialGroup()
+                .addGap(351, 351, 351)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JD_crudempleadosLayout.setVerticalGroup(
             JD_crudempleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JD_crudempleadosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        javax.swing.GroupLayout JP_crearcarroLayout = new javax.swing.GroupLayout(JP_crearcarro);
+        JP_crearcarro.setLayout(JP_crearcarroLayout);
+        JP_crearcarroLayout.setHorizontalGroup(
+            JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1063, Short.MAX_VALUE)
+        );
+        JP_crearcarroLayout.setVerticalGroup(
+            JP_crearcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("Creacion", JP_crearcarro);
+
+        javax.swing.GroupLayout JP_modificarcarroLayout = new javax.swing.GroupLayout(JP_modificarcarro);
+        JP_modificarcarro.setLayout(JP_modificarcarroLayout);
+        JP_modificarcarroLayout.setHorizontalGroup(
+            JP_modificarcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1063, Short.MAX_VALUE)
+        );
+        JP_modificarcarroLayout.setVerticalGroup(
+            JP_modificarcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("Modificacion", JP_modificarcarro);
+
+        javax.swing.GroupLayout JP_listarcarroLayout = new javax.swing.GroupLayout(JP_listarcarro);
+        JP_listarcarro.setLayout(JP_listarcarroLayout);
+        JP_listarcarroLayout.setHorizontalGroup(
+            JP_listarcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1063, Short.MAX_VALUE)
+        );
+        JP_listarcarroLayout.setVerticalGroup(
+            JP_listarcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane2.addTab("Listar", JP_listarcarro);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel3.setText("CRUD Carros");
 
         javax.swing.GroupLayout JD_crudcarrosLayout = new javax.swing.GroupLayout(JD_crudcarros.getContentPane());
         JD_crudcarros.getContentPane().setLayout(JD_crudcarrosLayout);
         JD_crudcarrosLayout.setHorizontalGroup(
             JD_crudcarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(JD_crudcarrosLayout.createSequentialGroup()
+                .addGap(388, 388, 388)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JD_crudcarrosLayout.setVerticalGroup(
             JD_crudcarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JD_crudcarrosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout JD_otrosmenusLayout = new javax.swing.GroupLayout(JD_otrosmenus.getContentPane());
@@ -75,12 +192,27 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JB_crudempleados.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         JB_crudempleados.setText("Ingresar CRUD Empleados");
+        JB_crudempleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_crudempleadosMouseClicked(evt);
+            }
+        });
 
         JB_crudcarros.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         JB_crudcarros.setText("Ingresar CRUD Carros");
+        JB_crudcarros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_crudcarrosMouseClicked(evt);
+            }
+        });
 
         JB_otrosmenus.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         JB_otrosmenus.setText("Simulacion/Pagos/Entregas/Reparaciones");
+        JB_otrosmenus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_otrosmenusMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,6 +249,21 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JB_crudempleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crudempleadosMouseClicked
+        // TODO add your handling code here:
+        showCrudempleados();
+    }//GEN-LAST:event_JB_crudempleadosMouseClicked
+
+    private void JB_crudcarrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crudcarrosMouseClicked
+        // TODO add your handling code here:
+        showCrudcarros();
+    }//GEN-LAST:event_JB_crudcarrosMouseClicked
+
+    private void JB_otrosmenusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_otrosmenusMouseClicked
+        // TODO add your handling code here:
+        showOtrosmenus();
+    }//GEN-LAST:event_JB_otrosmenusMouseClicked
 
     /**
      * @param args the command line arguments
@@ -160,6 +307,15 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JDialog JD_crudcarros;
     private javax.swing.JDialog JD_crudempleados;
     private javax.swing.JDialog JD_otrosmenus;
+    private javax.swing.JPanel JP_crearcarro;
+    private javax.swing.JPanel JP_crearempleado;
+    private javax.swing.JPanel JP_eliminarempleado;
+    private javax.swing.JPanel JP_listarcarro;
+    private javax.swing.JPanel JP_modificarcarro;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     // End of variables declaration//GEN-END:variables
 }
