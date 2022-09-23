@@ -88,12 +88,16 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JC_simcarros = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         JPB_barrarep = new javax.swing.JProgressBar();
-        jButton1 = new javax.swing.JButton();
+        JB_simular = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TA_estadofinal = new javax.swing.JTextArea();
         JP_pagos = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        JTable_pagos = new javax.swing.JTable();
         JP_entregas = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         JP_reparaciones = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable_reparaciones = new javax.swing.JTable();
@@ -362,16 +366,16 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JPB_barrarep.setForeground(new java.awt.Color(51, 255, 0));
         JPB_barrarep.setStringPainted(true);
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("Simular");
+        JB_simular.setBackground(new java.awt.Color(204, 255, 255));
+        JB_simular.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        JB_simular.setText("Simular");
 
         jLabel17.setText("Estado Final del Vehicullo:");
 
-        jTextArea1.setBackground(new java.awt.Color(204, 255, 255));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        TA_estadofinal.setBackground(new java.awt.Color(204, 255, 255));
+        TA_estadofinal.setColumns(20);
+        TA_estadofinal.setRows(5);
+        jScrollPane2.setViewportView(TA_estadofinal);
 
         javax.swing.GroupLayout JP_simulacionLayout = new javax.swing.GroupLayout(JP_simulacion);
         JP_simulacion.setLayout(JP_simulacionLayout);
@@ -394,7 +398,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                                 .addComponent(JC_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(JP_simulacionLayout.createSequentialGroup()
                         .addGap(85, 85, 85)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JB_simular, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(286, 286, 286)
                         .addComponent(jLabel17)
                         .addGap(32, 32, 32)
@@ -416,7 +420,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                 .addComponent(JPB_barrarep, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(75, 75, 75)
                 .addGroup(JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_simular, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(104, Short.MAX_VALUE))
@@ -426,30 +430,80 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JP_pagos.setBackground(new java.awt.Color(255, 255, 255));
 
+        JTable_pagos.setBackground(new java.awt.Color(204, 255, 255));
+        JTable_pagos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Carro", "Pago Completado"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(JTable_pagos);
+
         javax.swing.GroupLayout JP_pagosLayout = new javax.swing.GroupLayout(JP_pagos);
         JP_pagos.setLayout(JP_pagosLayout);
         JP_pagosLayout.setHorizontalGroup(
             JP_pagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1095, Short.MAX_VALUE)
+            .addGroup(JP_pagosLayout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 775, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         JP_pagosLayout.setVerticalGroup(
             JP_pagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(JP_pagosLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Pagos", JP_pagos);
 
         JP_entregas.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTable1.setBackground(new java.awt.Color(204, 255, 255));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Carro", "Estado Entrega"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jTable1);
+
         javax.swing.GroupLayout JP_entregasLayout = new javax.swing.GroupLayout(JP_entregas);
         JP_entregas.setLayout(JP_entregasLayout);
         JP_entregasLayout.setHorizontalGroup(
             JP_entregasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1095, Short.MAX_VALUE)
+            .addGroup(JP_entregasLayout.createSequentialGroup()
+                .addGap(148, 148, 148)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 753, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         JP_entregasLayout.setVerticalGroup(
             JP_entregasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(JP_entregasLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Entregas", JP_entregas);
@@ -655,6 +709,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JButton JB_crudcarros;
     private javax.swing.JButton JB_crudempleados;
     private javax.swing.JButton JB_otrosmenus;
+    private javax.swing.JButton JB_simular;
     private javax.swing.JComboBox<String> JC_simcarros;
     private javax.swing.JComboBox<String> JC_simempleados;
     private javax.swing.JDialog JD_crudcarros;
@@ -676,13 +731,14 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JSpinner JS_carrosrep;
     private javax.swing.JSpinner JS_costorep;
     private javax.swing.JSpinner JS_edad;
+    private javax.swing.JTable JTable_pagos;
     private javax.swing.JTable JTable_reparaciones;
+    private javax.swing.JTextArea TA_estadofinal;
     private javax.swing.JTextField TF_id;
     private javax.swing.JTextField TF_marca;
     private javax.swing.JTextField TF_modelo;
     private javax.swing.JTextField TF_nombre;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -702,9 +758,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
