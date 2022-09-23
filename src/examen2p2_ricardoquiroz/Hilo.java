@@ -5,12 +5,31 @@
  */
 package examen2p2_ricardoquiroz;
 
+import java.util.ArrayList;
+import javax.swing.JProgressBar;
+
 /**
  *
  * @author rjqer
  */
 public class Hilo extends Thread{
+    private JProgressBar barra;
+    private Carro carro;
+
+    public Hilo() {
+    }
+
+    public Hilo(JProgressBar barra, Carro carro) {
+        this.barra = barra;
+        this.carro = carro;
+    }
+
     
+    
+    
+    public void run(){
+        
+    }
     
     
     
