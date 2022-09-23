@@ -60,10 +60,23 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JP_listarcarro = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         JD_otrosmenus = new javax.swing.JDialog();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        JP_simulacion = new javax.swing.JPanel();
+        JP_pagos = new javax.swing.JPanel();
+        JP_entregas = new javax.swing.JPanel();
+        JP_reparaciones = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JTable_reparaciones = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
+        JP_bgframe = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         JB_crudempleados = new javax.swing.JButton();
         JB_crudcarros = new javax.swing.JButton();
         JB_otrosmenus = new javax.swing.JButton();
+
+        JD_crudempleados.setLocationByPlatform(true);
+
+        JP_crearempleado.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout JP_crearempleadoLayout = new javax.swing.GroupLayout(JP_crearempleado);
         JP_crearempleado.setLayout(JP_crearempleadoLayout);
@@ -77,6 +90,8 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Creacion", JP_crearempleado);
+
+        JP_eliminarempleado.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout JP_eliminarempleadoLayout = new javax.swing.GroupLayout(JP_eliminarempleado);
         JP_eliminarempleado.setLayout(JP_eliminarempleadoLayout);
@@ -100,18 +115,22 @@ public class Examen2P2_Main extends javax.swing.JFrame {
             JD_crudempleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(JD_crudempleadosLayout.createSequentialGroup()
-                .addGap(351, 351, 351)
+                .addGap(362, 362, 362)
                 .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JD_crudempleadosLayout.setVerticalGroup(
             JD_crudempleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JD_crudempleadosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(16, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        JD_crudcarros.setLocationByPlatform(true);
+
+        JP_crearcarro.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout JP_crearcarroLayout = new javax.swing.GroupLayout(JP_crearcarro);
         JP_crearcarro.setLayout(JP_crearcarroLayout);
@@ -126,6 +145,8 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Creacion", JP_crearcarro);
 
+        JP_modificarcarro.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout JP_modificarcarroLayout = new javax.swing.GroupLayout(JP_modificarcarro);
         JP_modificarcarro.setLayout(JP_modificarcarroLayout);
         JP_modificarcarroLayout.setHorizontalGroup(
@@ -138,6 +159,8 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         );
 
         jTabbedPane2.addTab("Modificacion", JP_modificarcarro);
+
+        JP_listarcarro.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout JP_listarcarroLayout = new javax.swing.GroupLayout(JP_listarcarro);
         JP_listarcarro.setLayout(JP_listarcarroLayout);
@@ -161,35 +184,136 @@ public class Examen2P2_Main extends javax.swing.JFrame {
             JD_crudcarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(JD_crudcarrosLayout.createSequentialGroup()
-                .addGap(388, 388, 388)
+                .addGap(387, 387, 387)
                 .addComponent(jLabel3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JD_crudcarrosLayout.setVerticalGroup(
             JD_crudcarrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JD_crudcarrosLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(16, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+
+        JD_otrosmenus.setLocationByPlatform(true);
+
+        JP_simulacion.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout JP_simulacionLayout = new javax.swing.GroupLayout(JP_simulacion);
+        JP_simulacion.setLayout(JP_simulacionLayout);
+        JP_simulacionLayout.setHorizontalGroup(
+            JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1095, Short.MAX_VALUE)
+        );
+        JP_simulacionLayout.setVerticalGroup(
+            JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane3.addTab("Simulacion", JP_simulacion);
+
+        JP_pagos.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout JP_pagosLayout = new javax.swing.GroupLayout(JP_pagos);
+        JP_pagos.setLayout(JP_pagosLayout);
+        JP_pagosLayout.setHorizontalGroup(
+            JP_pagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1095, Short.MAX_VALUE)
+        );
+        JP_pagosLayout.setVerticalGroup(
+            JP_pagosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane3.addTab("Pagos", JP_pagos);
+
+        JP_entregas.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout JP_entregasLayout = new javax.swing.GroupLayout(JP_entregas);
+        JP_entregas.setLayout(JP_entregasLayout);
+        JP_entregasLayout.setHorizontalGroup(
+            JP_entregasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1095, Short.MAX_VALUE)
+        );
+        JP_entregasLayout.setVerticalGroup(
+            JP_entregasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 519, Short.MAX_VALUE)
+        );
+
+        jTabbedPane3.addTab("Entregas", JP_entregas);
+
+        JP_reparaciones.setBackground(new java.awt.Color(255, 255, 255));
+
+        JTable_reparaciones.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Empleado", "Carro a Reparar", "Exito"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(JTable_reparaciones);
+
+        javax.swing.GroupLayout JP_reparacionesLayout = new javax.swing.GroupLayout(JP_reparaciones);
+        JP_reparaciones.setLayout(JP_reparacionesLayout);
+        JP_reparacionesLayout.setHorizontalGroup(
+            JP_reparacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_reparacionesLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 912, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(119, Short.MAX_VALUE))
+        );
+        JP_reparacionesLayout.setVerticalGroup(
+            JP_reparacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_reparacionesLayout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(116, Short.MAX_VALUE))
+        );
+
+        jTabbedPane3.addTab("Reparaciones", JP_reparaciones);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel4.setText("Sistema del Taller");
 
         javax.swing.GroupLayout JD_otrosmenusLayout = new javax.swing.GroupLayout(JD_otrosmenus.getContentPane());
         JD_otrosmenus.getContentPane().setLayout(JD_otrosmenusLayout);
         JD_otrosmenusLayout.setHorizontalGroup(
             JD_otrosmenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jTabbedPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(JD_otrosmenusLayout.createSequentialGroup()
+                .addGap(357, 357, 357)
+                .addComponent(jLabel4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         JD_otrosmenusLayout.setVerticalGroup(
             JD_otrosmenusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JD_otrosmenusLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+
+        JP_bgframe.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("Bienvenido al Sistema del Taller");
 
+        JB_crudempleados.setBackground(new java.awt.Color(204, 255, 255));
         JB_crudempleados.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         JB_crudempleados.setText("Ingresar CRUD Empleados");
         JB_crudempleados.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -198,6 +322,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
             }
         });
 
+        JB_crudcarros.setBackground(new java.awt.Color(204, 255, 255));
         JB_crudcarros.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         JB_crudcarros.setText("Ingresar CRUD Carros");
         JB_crudcarros.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -206,6 +331,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
             }
         });
 
+        JB_otrosmenus.setBackground(new java.awt.Color(204, 255, 255));
         JB_otrosmenus.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         JB_otrosmenus.setText("Simulacion/Pagos/Entregas/Reparaciones");
         JB_otrosmenus.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -214,37 +340,49 @@ public class Examen2P2_Main extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout JP_bgframeLayout = new javax.swing.GroupLayout(JP_bgframe);
+        JP_bgframe.setLayout(JP_bgframeLayout);
+        JP_bgframeLayout.setHorizontalGroup(
+            JP_bgframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_bgframeLayout.createSequentialGroup()
+                .addGap(0, 84, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(83, 83, 83))
+            .addGroup(JP_bgframeLayout.createSequentialGroup()
+                .addGroup(JP_bgframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_bgframeLayout.createSequentialGroup()
+                        .addGap(256, 256, 256)
+                        .addGroup(JP_bgframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(JB_crudcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(JB_crudempleados, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(227, 227, 227)
+                    .addGroup(JP_bgframeLayout.createSequentialGroup()
+                        .addGap(225, 225, 225)
                         .addComponent(JB_otrosmenus)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+        JP_bgframeLayout.setVerticalGroup(
+            JP_bgframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_bgframeLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(JB_crudempleados, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(JB_crudcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(JB_otrosmenus, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addGap(80, 80, 80))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JP_bgframe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(JP_bgframe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -307,15 +445,24 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JDialog JD_crudcarros;
     private javax.swing.JDialog JD_crudempleados;
     private javax.swing.JDialog JD_otrosmenus;
+    private javax.swing.JPanel JP_bgframe;
     private javax.swing.JPanel JP_crearcarro;
     private javax.swing.JPanel JP_crearempleado;
     private javax.swing.JPanel JP_eliminarempleado;
+    private javax.swing.JPanel JP_entregas;
     private javax.swing.JPanel JP_listarcarro;
     private javax.swing.JPanel JP_modificarcarro;
+    private javax.swing.JPanel JP_pagos;
+    private javax.swing.JPanel JP_reparaciones;
+    private javax.swing.JPanel JP_simulacion;
+    private javax.swing.JTable JTable_reparaciones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     // End of variables declaration//GEN-END:variables
 }
