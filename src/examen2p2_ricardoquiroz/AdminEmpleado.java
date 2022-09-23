@@ -47,7 +47,7 @@ public class AdminEmpleado {
     }
 
     
-    public void setEmpleado(Empleado p) {
+    public void addEmpleado(Empleado p) {
         this.listaempleados.add(p);
     }
 

@@ -47,7 +47,7 @@ public class AdminCarro {
     }
 
     
-    public void setCarro(Carro p) {
+    public void addCarro(Carro p) {
         this.listacarros.add(p);
     }
 
