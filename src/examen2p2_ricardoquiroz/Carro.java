@@ -72,7 +72,7 @@ public class Carro implements Serializable{
 
     @Override
     public String toString() {
-        return marca + ", modelo=" + modelo + ", estado=" + estado + ", costorep=" + costorep;
+        return marca + ", " + modelo + ", " + estado + ", CRep=" + costorep;
     }
     
     

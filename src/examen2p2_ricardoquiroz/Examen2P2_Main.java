@@ -5,6 +5,7 @@
  */
 package examen2p2_ricardoquiroz;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,6 +23,16 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         ae.cargarArchivo();
         AdminCarro ac = new AdminCarro("./carros");
         ac.cargarArchivo();
+        DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_simempleados.getModel();
+        mod.removeAllElements();
+        for (Empleado emp : ae.getListaemlpeados()) {
+            mod.addElement(emp);
+        }
+        DefaultComboBoxModel mod2 = (DefaultComboBoxModel)CB_simcarros.getModel();
+        mod2.removeAllElements();
+        for (Carro car : ac.getListacarros()) {
+            mod2.addElement(car);
+        }
         
     }
     
@@ -89,10 +100,10 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JD_otrosmenus = new javax.swing.JDialog();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         JP_simulacion = new javax.swing.JPanel();
-        JC_simempleados = new javax.swing.JComboBox<>();
+        CB_simempleados = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        JC_simcarros = new javax.swing.JComboBox<>();
+        CB_simcarros = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         JPB_barrarep = new javax.swing.JProgressBar();
         JB_simular = new javax.swing.JButton();
@@ -368,15 +379,14 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JP_simulacion.setBackground(new java.awt.Color(255, 255, 255));
 
-        JC_simempleados.setBackground(new java.awt.Color(204, 255, 255));
-        JC_simempleados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "sdasd" }));
+        CB_simempleados.setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel14.setText("Empleados:");
 
         jLabel15.setText("Carros:");
 
-        JC_simcarros.setBackground(new java.awt.Color(204, 255, 255));
-        JC_simcarros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", " ", " " }));
+        CB_simcarros.setBackground(new java.awt.Color(204, 255, 255));
+        CB_simcarros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
 
         jLabel16.setText("Reparacion del Vehiculo:");
 
@@ -387,7 +397,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JB_simular.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         JB_simular.setText("Simular");
 
-        jLabel17.setText("Estado Final del Vehicullo:");
+        jLabel17.setText("Estado Final del Vehiculo:");
 
         TA_estadofinal.setBackground(new java.awt.Color(204, 255, 255));
         TA_estadofinal.setColumns(20);
@@ -408,11 +418,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                             .addGroup(JP_simulacionLayout.createSequentialGroup()
                                 .addComponent(jLabel14)
                                 .addGap(18, 18, 18)
-                                .addComponent(JC_simempleados, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(124, 124, 124)
+                                .addComponent(CB_simempleados, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(37, 37, 37)
                                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(JC_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(CB_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(JP_simulacionLayout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addComponent(JB_simular, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -420,17 +430,17 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                         .addComponent(jLabel17)
                         .addGap(32, 32, 32)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         JP_simulacionLayout.setVerticalGroup(
             JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_simulacionLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JC_simempleados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CB_simempleados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14)
                     .addComponent(jLabel15)
-                    .addComponent(JC_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CB_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addComponent(jLabel16)
                 .addGap(18, 18, 18)
@@ -440,7 +450,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                     .addComponent(JB_simular, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(104, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         jTabbedPane3.addTab("Simulacion", JP_simulacion);
@@ -701,6 +711,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         TF_nombre.setText("");
         JS_edad.setValue(0);
         JS_carrosrep.setValue(0);
+        DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_simempleados.getModel();
+        mod.removeAllElements();
+        for (Empleado emp : ae.getListaemlpeados()) {
+            mod.addElement(emp);
+        }
     }//GEN-LAST:event_JB_crearempleadoMouseClicked
 
     private void JB_crearcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crearcarroMouseClicked
@@ -719,7 +734,12 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         TF_marca.setText("");
         TF_modelo.setText("");
         JS_anofab.setValue(0);
-        JS_costorep.setValue(0);        
+        JS_costorep.setValue(0);   
+        DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_simcarros.getModel();
+        mod.removeAllElements();
+        for (Carro car : ac.getListacarros()) {
+            mod.addElement(car);
+        }
     }//GEN-LAST:event_JB_crearcarroMouseClicked
 
     /**
@@ -758,14 +778,14 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CB_simcarros;
+    private javax.swing.JComboBox<String> CB_simempleados;
     private javax.swing.JButton JB_crearcarro;
     private javax.swing.JButton JB_crearempleado;
     private javax.swing.JButton JB_crudcarros;
     private javax.swing.JButton JB_crudempleados;
     private javax.swing.JButton JB_otrosmenus;
     private javax.swing.JButton JB_simular;
-    private javax.swing.JComboBox<String> JC_simcarros;
-    private javax.swing.JComboBox<String> JC_simempleados;
     private javax.swing.JDialog JD_crudcarros;
     private javax.swing.JDialog JD_crudempleados;
     private javax.swing.JDialog JD_otrosmenus;
