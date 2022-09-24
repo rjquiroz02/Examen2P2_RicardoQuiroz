@@ -896,6 +896,12 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
     private void JB_simularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_simularMouseClicked
         // TODO add your handling code here:
+        AdminCarro ac = new AdminCarro("./carros");
+        ac.cargarArchivo();
+        AdminEmpleado ae = new AdminEmpleado("./empleados");
+        ae.cargarArchivo();
+        Hilo h = new Hilo(JPB_barrarep, (Carro)CB_simcarros.getSelectedItem());
+        h.start();
         
     }//GEN-LAST:event_JB_simularMouseClicked
 

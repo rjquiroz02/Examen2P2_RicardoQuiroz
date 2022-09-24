@@ -22,12 +22,20 @@ public class Hilo extends Thread{
     public Hilo(JProgressBar barra, Carro carro) {
         this.barra = barra;
         this.carro = carro;
+        this.barra.setMaximum(carro.getCostorep()/1000);
     }
 
     
     
     
     public void run(){
+        try {
+            for (int i = 0; i <= barra.getMaximum(); i++) {
+            barra.setValue(i);
+            Thread.sleep(1000);
+        }
+        } catch (Exception e) {
+        }
         
     }
     
