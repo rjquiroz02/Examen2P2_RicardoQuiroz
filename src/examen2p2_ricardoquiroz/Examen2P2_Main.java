@@ -902,7 +902,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         ae.cargarArchivo();
         Hilo h = new Hilo(JPB_barrarep, (Carro)CB_simcarros.getSelectedItem());
         h.start();
-        
+        JOptionPane.showMessageDialog(this, "Simulacion Completada");
     }//GEN-LAST:event_JB_simularMouseClicked
 
     private void JB_modcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_modcarroMouseClicked
