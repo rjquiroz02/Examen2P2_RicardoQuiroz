@@ -908,7 +908,8 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         c.setCostorep((Integer)JS_modcostorep.getValue());
         c.setEstado(JR_modespera.getText());
         AdminCarro ac = new AdminCarro("./carros");
-        ac.getListacarros().remove((Carro)CB_modcarro.getSelectedItem());
+        ac.cargarArchivo();
+        ac.getListacarros().remove(CB_modcarro.getSelectedIndex());
         ac.addCarro(c);      
         ac.escribirArchivo();
         ac.cargarArchivo();
@@ -937,9 +938,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     }//GEN-LAST:event_CB_modcarroItemStateChanged
 
     private void JB_elimempleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_elimempleadoMouseClicked
-        // TODO add your handling code here:
+        // TODO add your handling code here:             
         AdminEmpleado ae = new AdminEmpleado("./empleados");
-        ae.getListaemlpeados().remove(CB_elimempleado.getSelectedItem());
+        ae.cargarArchivo();
+        System.out.println(ae.getListaemlpeados());
+        ae.getListaemlpeados().remove(CB_elimempleado.getSelectedIndex());
         ae.escribirArchivo();
         ae.cargarArchivo();
         DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_simempleados.getModel();
