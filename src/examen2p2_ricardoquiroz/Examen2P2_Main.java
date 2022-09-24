@@ -33,6 +33,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         for (Carro car : ac.getListacarros()) {
             mod2.addElement(car);
         }
+        DefaultComboBoxModel mode = (DefaultComboBoxModel)CB_modcarro.getModel();
+        mode.removeAllElements();
+        for (Carro car : ac.getListacarros()) {
+            mode.addElement(car);
+        }
         
     }
     
@@ -94,7 +99,20 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         JS_costorep = new javax.swing.JSpinner();
         JB_crearcarro = new javax.swing.JButton();
-        JP_modificarcarro = new javax.swing.JPanel();
+        JP_modcarro = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        TF_modmarca = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        TF_modmodelo = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        JS_modanofab = new javax.swing.JSpinner();
+        jLabel21 = new javax.swing.JLabel();
+        JR_modespera = new javax.swing.JRadioButton();
+        jLabel22 = new javax.swing.JLabel();
+        JS_modcostorep = new javax.swing.JSpinner();
+        JB_modcarro = new javax.swing.JButton();
+        jLabel23 = new javax.swing.JLabel();
+        CB_modcarro = new javax.swing.JComboBox<>();
         JP_listarcarro = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         JD_otrosmenus = new javax.swing.JDialog();
@@ -252,7 +270,6 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         jLabel12.setText("Estado:");
 
         buttonGroup1.add(JR_espera);
-        JR_espera.setSelected(true);
         JR_espera.setText("EsperaEntrarReparacion");
 
         jLabel13.setText("Costo Reparacion:");
@@ -325,20 +342,109 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Creacion", JP_crearcarro);
 
-        JP_modificarcarro.setBackground(new java.awt.Color(255, 255, 255));
+        JP_modcarro.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout JP_modificarcarroLayout = new javax.swing.GroupLayout(JP_modificarcarro);
-        JP_modificarcarro.setLayout(JP_modificarcarroLayout);
-        JP_modificarcarroLayout.setHorizontalGroup(
-            JP_modificarcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1063, Short.MAX_VALUE)
+        jLabel18.setText("Marca:");
+
+        TF_modmarca.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel19.setText("Modelo:");
+
+        TF_modmodelo.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel20.setText("Año Fabriacado:");
+
+        jLabel21.setText("Estado:");
+
+        buttonGroup1.add(JR_modespera);
+        JR_modespera.setSelected(true);
+        JR_modespera.setText("EsperaEntrarReparacion");
+
+        jLabel22.setText("Costo Reparacion:");
+
+        JB_modcarro.setBackground(new java.awt.Color(204, 255, 255));
+        JB_modcarro.setText("Modificar Carro");
+        JB_modcarro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_modcarroMouseClicked(evt);
+            }
+        });
+
+        jLabel23.setText("Seleccione carro a modificar:");
+
+        CB_modcarro.setBackground(new java.awt.Color(204, 255, 255));
+        CB_modcarro.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                CB_modcarroItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout JP_modcarroLayout = new javax.swing.GroupLayout(JP_modcarro);
+        JP_modcarro.setLayout(JP_modcarroLayout);
+        JP_modcarroLayout.setHorizontalGroup(
+            JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_modcarroLayout.createSequentialGroup()
+                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_modcarroLayout.createSequentialGroup()
+                        .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_modcarroLayout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(jLabel18)
+                                .addGap(18, 18, 18)
+                                .addComponent(TF_modmarca, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(JP_modcarroLayout.createSequentialGroup()
+                                .addGap(67, 67, 67)
+                                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel20)
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel22))
+                                .addGap(18, 18, 18)
+                                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(TF_modmodelo)
+                                    .addComponent(JS_modanofab, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                                    .addComponent(JR_modespera)
+                                    .addComponent(JS_modcostorep))))
+                        .addGap(153, 153, 153)
+                        .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel23)
+                            .addComponent(CB_modcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(JP_modcarroLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(JB_modcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
-        JP_modificarcarroLayout.setVerticalGroup(
-            JP_modificarcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+        JP_modcarroLayout.setVerticalGroup(
+            JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_modcarroLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(TF_modmarca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23))
+                .addGap(18, 18, 18)
+                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(TF_modmodelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CB_modcarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(JS_modanofab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(JR_modespera))
+                .addGap(18, 18, 18)
+                .addGroup(JP_modcarroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(JS_modcostorep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(JB_modcarro, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("Modificacion", JP_modificarcarro);
+        jTabbedPane2.addTab("Modificacion", JP_modcarro);
 
         JP_listarcarro.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -390,17 +496,23 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         jLabel16.setText("Reparacion del Vehiculo:");
 
-        JPB_barrarep.setForeground(new java.awt.Color(51, 255, 0));
+        JPB_barrarep.setForeground(new java.awt.Color(204, 255, 255));
         JPB_barrarep.setStringPainted(true);
 
         JB_simular.setBackground(new java.awt.Color(204, 255, 255));
         JB_simular.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         JB_simular.setText("Simular");
+        JB_simular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_simularMouseClicked(evt);
+            }
+        });
 
         jLabel17.setText("Estado Final del Vehiculo:");
 
         TA_estadofinal.setBackground(new java.awt.Color(204, 255, 255));
         TA_estadofinal.setColumns(20);
+        TA_estadofinal.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         TA_estadofinal.setRows(5);
         jScrollPane2.setViewportView(TA_estadofinal);
 
@@ -413,7 +525,6 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                     .addGroup(JP_simulacionLayout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addGroup(JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JPB_barrarep, javax.swing.GroupLayout.PREFERRED_SIZE, 898, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16)
                             .addGroup(JP_simulacionLayout.createSequentialGroup()
                                 .addComponent(jLabel14)
@@ -422,7 +533,8 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                                 .addGap(37, 37, 37)
                                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(CB_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(CB_simcarros, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JPB_barrarep, javax.swing.GroupLayout.PREFERRED_SIZE, 992, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(JP_simulacionLayout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addComponent(JB_simular, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -430,7 +542,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
                         .addComponent(jLabel17)
                         .addGap(32, 32, 32)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         JP_simulacionLayout.setVerticalGroup(
             JP_simulacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -740,7 +852,54 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         for (Carro car : ac.getListacarros()) {
             mod.addElement(car);
         }
+        DefaultComboBoxModel mode = (DefaultComboBoxModel)CB_modcarro.getModel();
+        mode.removeAllElements();
+        for (Carro car : ac.getListacarros()) {
+            mode.addElement(car);
+        }
     }//GEN-LAST:event_JB_crearcarroMouseClicked
+
+    private void JB_simularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_simularMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_JB_simularMouseClicked
+
+    private void JB_modcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_modcarroMouseClicked
+        // TODO add your handling code here:       
+        Carro c = new Carro();
+        c.setMarca(TF_modmarca.getText());
+        c.setModelo(TF_modmodelo.getText());
+        c.setAnofab((Integer)JS_modanofab.getValue());
+        c.setCostorep((Integer)JS_modcostorep.getValue());
+        c.setEstado(JR_modespera.getText());
+        AdminCarro ac = new AdminCarro("./carros");
+        ac.cargarArchivo();
+        ac.getListacarros().remove((Carro)CB_modcarro.getSelectedItem());
+        ac.addCarro(c);      
+        ac.escribirArchivo();
+        DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_simcarros.getModel();
+        mod.removeAllElements();
+        for (Carro car : ac.getListacarros()) {
+            mod.addElement(car);
+        }
+        DefaultComboBoxModel mode = (DefaultComboBoxModel)CB_modcarro.getModel();
+        mode.removeAllElements();
+        for (Carro car : ac.getListacarros()) {
+            mode.addElement(car);
+        }
+        JOptionPane.showMessageDialog(this, "Se modifico un carro exitosamente");
+    }//GEN-LAST:event_JB_modcarroMouseClicked
+
+    private void CB_modcarroItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_CB_modcarroItemStateChanged
+        // TODO add your handling code here:
+        Carro temp = (Carro)CB_modcarro.getSelectedItem();
+        if (temp != null) {
+            TF_modmarca.setText(temp.getMarca());
+            TF_modmodelo.setText(temp.getModelo());
+            JS_modanofab.setValue(temp.getAnofab());
+            JS_modcostorep.setValue(temp.getCostorep());
+        }       
+    }//GEN-LAST:event_CB_modcarroItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -778,12 +937,14 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CB_modcarro;
     private javax.swing.JComboBox<String> CB_simcarros;
     private javax.swing.JComboBox<String> CB_simempleados;
     private javax.swing.JButton JB_crearcarro;
     private javax.swing.JButton JB_crearempleado;
     private javax.swing.JButton JB_crudcarros;
     private javax.swing.JButton JB_crudempleados;
+    private javax.swing.JButton JB_modcarro;
     private javax.swing.JButton JB_otrosmenus;
     private javax.swing.JButton JB_simular;
     private javax.swing.JDialog JD_crudcarros;
@@ -796,21 +957,26 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JPanel JP_eliminarempleado;
     private javax.swing.JPanel JP_entregas;
     private javax.swing.JPanel JP_listarcarro;
-    private javax.swing.JPanel JP_modificarcarro;
+    private javax.swing.JPanel JP_modcarro;
     private javax.swing.JPanel JP_pagos;
     private javax.swing.JPanel JP_reparaciones;
     private javax.swing.JPanel JP_simulacion;
     private javax.swing.JRadioButton JR_espera;
+    private javax.swing.JRadioButton JR_modespera;
     private javax.swing.JSpinner JS_anofab;
     private javax.swing.JSpinner JS_carrosrep;
     private javax.swing.JSpinner JS_costorep;
     private javax.swing.JSpinner JS_edad;
+    private javax.swing.JSpinner JS_modanofab;
+    private javax.swing.JSpinner JS_modcostorep;
     private javax.swing.JTable JTable_pagos;
     private javax.swing.JTable JTable_reparaciones;
     private javax.swing.JTextArea TA_estadofinal;
     private javax.swing.JTextField TF_id;
     private javax.swing.JTextField TF_marca;
     private javax.swing.JTextField TF_modelo;
+    private javax.swing.JTextField TF_modmarca;
+    private javax.swing.JTextField TF_modmodelo;
     private javax.swing.JTextField TF_nombre;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
@@ -822,7 +988,13 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
