@@ -38,6 +38,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         for (Carro car : ac.getListacarros()) {
             mode.addElement(car);
         }
+        DefaultComboBoxModel model = (DefaultComboBoxModel)CB_elimempleado.getModel();
+        model.removeAllElements();
+        for (Empleado emp : ae.getListaemlpeados()) {
+            model.addElement(emp);
+        }
         
     }
     
@@ -84,6 +89,8 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         JS_carrosrep = new javax.swing.JSpinner();
         JB_crearempleado = new javax.swing.JButton();
         JP_eliminarempleado = new javax.swing.JPanel();
+        CB_elimempleado = new javax.swing.JComboBox<>();
+        JB_elimempleado = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         JD_crudcarros = new javax.swing.JDialog();
         jTabbedPane2 = new javax.swing.JTabbedPane();
@@ -220,15 +227,38 @@ public class Examen2P2_Main extends javax.swing.JFrame {
 
         JP_eliminarempleado.setBackground(new java.awt.Color(255, 255, 255));
 
+        CB_elimempleado.setBackground(new java.awt.Color(204, 255, 255));
+
+        JB_elimempleado.setBackground(new java.awt.Color(204, 255, 255));
+        JB_elimempleado.setText("Eliminar Empleado");
+        JB_elimempleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JB_elimempleadoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout JP_eliminarempleadoLayout = new javax.swing.GroupLayout(JP_eliminarempleado);
         JP_eliminarempleado.setLayout(JP_eliminarempleadoLayout);
         JP_eliminarempleadoLayout.setHorizontalGroup(
             JP_eliminarempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1059, Short.MAX_VALUE)
+            .addGroup(JP_eliminarempleadoLayout.createSequentialGroup()
+                .addGroup(JP_eliminarempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JP_eliminarempleadoLayout.createSequentialGroup()
+                        .addGap(208, 208, 208)
+                        .addComponent(CB_elimempleado, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JP_eliminarempleadoLayout.createSequentialGroup()
+                        .addGap(273, 273, 273)
+                        .addComponent(JB_elimempleado, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(330, Short.MAX_VALUE))
         );
         JP_eliminarempleadoLayout.setVerticalGroup(
             JP_eliminarempleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(JP_eliminarempleadoLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(CB_elimempleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97)
+                .addComponent(JB_elimempleado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(318, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Eliminacion", JP_eliminarempleado);
@@ -828,6 +858,11 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         for (Empleado emp : ae.getListaemlpeados()) {
             mod.addElement(emp);
         }
+        DefaultComboBoxModel mode = (DefaultComboBoxModel)CB_elimempleado.getModel();
+        mode.removeAllElements();
+        for (Empleado emp : ae.getListaemlpeados()) {
+            mode.addElement(emp);
+        }
     }//GEN-LAST:event_JB_crearempleadoMouseClicked
 
     private void JB_crearcarroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_crearcarroMouseClicked
@@ -873,10 +908,10 @@ public class Examen2P2_Main extends javax.swing.JFrame {
         c.setCostorep((Integer)JS_modcostorep.getValue());
         c.setEstado(JR_modespera.getText());
         AdminCarro ac = new AdminCarro("./carros");
-        ac.cargarArchivo();
         ac.getListacarros().remove((Carro)CB_modcarro.getSelectedItem());
         ac.addCarro(c);      
         ac.escribirArchivo();
+        ac.cargarArchivo();
         DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_simcarros.getModel();
         mod.removeAllElements();
         for (Carro car : ac.getListacarros()) {
@@ -900,6 +935,25 @@ public class Examen2P2_Main extends javax.swing.JFrame {
             JS_modcostorep.setValue(temp.getCostorep());
         }       
     }//GEN-LAST:event_CB_modcarroItemStateChanged
+
+    private void JB_elimempleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JB_elimempleadoMouseClicked
+        // TODO add your handling code here:
+        AdminEmpleado ae = new AdminEmpleado("./empleados");
+        ae.getListaemlpeados().remove(CB_elimempleado.getSelectedItem());
+        ae.escribirArchivo();
+        ae.cargarArchivo();
+        DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_simempleados.getModel();
+        mod.removeAllElements();
+        for (Empleado emp : ae.getListaemlpeados()) {
+            mod.addElement(emp);
+        }
+        DefaultComboBoxModel model = (DefaultComboBoxModel)CB_elimempleado.getModel();
+        model.removeAllElements();
+        for (Empleado emp : ae.getListaemlpeados()) {
+            model.addElement(emp);
+        }
+        JOptionPane.showMessageDialog(this, "Empleado eliminado exitosamente");
+    }//GEN-LAST:event_JB_elimempleadoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -937,6 +991,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CB_elimempleado;
     private javax.swing.JComboBox<String> CB_modcarro;
     private javax.swing.JComboBox<String> CB_simcarros;
     private javax.swing.JComboBox<String> CB_simempleados;
@@ -944,6 +999,7 @@ public class Examen2P2_Main extends javax.swing.JFrame {
     private javax.swing.JButton JB_crearempleado;
     private javax.swing.JButton JB_crudcarros;
     private javax.swing.JButton JB_crudempleados;
+    private javax.swing.JButton JB_elimempleado;
     private javax.swing.JButton JB_modcarro;
     private javax.swing.JButton JB_otrosmenus;
     private javax.swing.JButton JB_simular;
